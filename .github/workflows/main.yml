@@ -1,0 +1,14 @@
+---
+on: [push]
+
+jobs:
+  test_lifx_job:
+    runs-on: ubuntu-latest
+    name: A job to test the LIFX Build Light
+    steps:
+    - name: Hello world action step
+      uses: smarthall/lifx-buildlight-action@master
+      with:
+        lifx-token: ${{ secrets.LIFX_TOKEN }}
+        selector: 'location:Work'
+        status: 'success'
