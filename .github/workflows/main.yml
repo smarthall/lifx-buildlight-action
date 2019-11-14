@@ -5,7 +5,7 @@ on: [push]
 jobs:
   test_lifx_job:
     runs-on: ubuntu-latest
-    name: Run example
+    name: Run examples
     steps:
     - name: Test build light in_progress mode
       uses: smarthall/lifx-buildlight-action@master
@@ -14,6 +14,13 @@ jobs:
         selector: 'location:Work'
         status: 'in_progress'
 
+    - name: Test build light failure mode
+      uses: smarthall/lifx-buildlight-action@master
+      with:
+        lifx-token: ${{ secrets.LIFX_TOKEN }}
+        selector: 'location:Work'
+        status: 'failure'
+
     - name: Test build light success mode
       uses: smarthall/lifx-buildlight-action@master
       with:
@@ -21,9 +28,3 @@ jobs:
         selector: 'location:Work'
         status: 'success'
 
-    - name: Test build light failure mode
-      uses: smarthall/lifx-buildlight-action@master
-      with:
-        lifx-token: ${{ secrets.LIFX_TOKEN }}
-        selector: 'location:Work'
-        status: 'failure'
