@@ -50,7 +50,7 @@ try {
             options.method = 'PUT';
             options.path = '/v1/lights/' + selector + '/state';
     
-            postData.color = 'red';
+            postData.color = 'green';
             postData.power = 'on';
             postData.fast = true;
             break;
