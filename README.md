@@ -50,11 +50,14 @@ Some example selectors are:
 
 Status can be set to one of `in_progress`, `success`, or `failure`. This will cause the lights to change status. Each status appears as follows:
 
-*in_progress*
+#### in_progress
+
 The selected lights will 'breathe' slowly between the previous state and orange. This will continue either for 6 minutes, or until another change is made.
 
-*success*
+#### success
+
 The selected lights will turn green.
 
-*failure*
+#### failure
+
 The selected lights will turn red.
