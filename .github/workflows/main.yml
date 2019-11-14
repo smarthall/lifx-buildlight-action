@@ -1,5 +1,5 @@
 ---
-name: A job to test the LIFX Build Light
+name: CI Build
 on: [push]
 
 jobs:
@@ -7,9 +7,23 @@ jobs:
     runs-on: ubuntu-latest
     name: Run example
     steps:
-    - name: Test build light Success
+    - name: Test build light in_progress mode
+      uses: smarthall/lifx-buildlight-action@master
+      with:
+        lifx-token: ${{ secrets.LIFX_TOKEN }}
+        selector: 'location:Work'
+        status: 'in_progress'
+
+    - name: Test build light success mode
       uses: smarthall/lifx-buildlight-action@master
       with:
         lifx-token: ${{ secrets.LIFX_TOKEN }}
         selector: 'location:Work'
         status: 'success'
+
+    - name: Test build light failure mode
+      uses: smarthall/lifx-buildlight-action@master
+      with:
+        lifx-token: ${{ secrets.LIFX_TOKEN }}
+        selector: 'location:Work'
+        status: 'failure'
