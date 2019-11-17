@@ -64,4 +64,4 @@ The selected lights will turn red.
 
 #### cancelled
 
-The slected lights will turn orange.
+The selected lights will turn orange.
