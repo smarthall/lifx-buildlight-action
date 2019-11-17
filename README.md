@@ -43,12 +43,12 @@ The selector allows you to select which devices will react to the pipeline. Usin
 Some example selectors are:
 `all` - All lights on the account.
 `label:Build` - All lights labelled 'build'.
-`location:HOme` - All lights in the location named 'Home'.
+`location:Home` - All lights in the location named 'Home'.
 `id:d073d52988f3` - The light with the serial number `d073d52988f3`.
 
 ### status
 
-Status can be set to one of `in_progress`, `success`, or `failure`. This will cause the lights to change status. Each status appears as follows:
+Status can be set to one of `in_progress`, `success`, `failure` or `cancelled`. This will cause the lights to change status. Each status appears as follows:
 
 #### in_progress
 
@@ -61,3 +61,7 @@ The selected lights will turn green.
 #### failure
 
 The selected lights will turn red.
+
+#### cancelled
+
+The slected lights will turn orange.

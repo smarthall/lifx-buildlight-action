@@ -10,7 +10,7 @@ inputs:
     description: 'The selector to choose which light, see: https://api.developer.lifx.com/docs/selectors'
     required: true
   status:
-    description: 'Either in_progress, failure or success'
+    description: 'Either in_progress, success, failure or cancelled'
     required: true
 runs:
   using: 'node12'

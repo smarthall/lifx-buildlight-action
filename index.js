@@ -6,6 +6,7 @@ const validStatus = [
     "in_progress",
     "failure",
     "success",
+    "cancelled",
 ]
 
 const options = {
@@ -46,11 +47,21 @@ try {
             postData.power = 'on';
             postData.fast = true;
             break;
+
         case 'success':
             options.method = 'PUT';
             options.path = '/v1/lights/' + selector + '/state';
     
             postData.color = 'green';
+            postData.power = 'on';
+            postData.fast = true;
+            break;
+
+        case 'cancelled':
+            options.method = 'PUT';
+            options.path = '/v1/lights/' + selector + '/state';
+    
+            postData.color = 'orange';
             postData.power = 'on';
             postData.fast = true;
             break;
