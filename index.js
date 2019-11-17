@@ -35,7 +35,7 @@ try {
 
             postData.color = 'orange';
             postData.period = 4;
-            postData.cycles = 99;
+            postData.cycles = 450;
             postData.power_on = true;
             break;
 

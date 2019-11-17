@@ -27,4 +27,3 @@ jobs:
         lifx-token: ${{ secrets.LIFX_TOKEN }}
         selector: 'location:Work'
         status: 'success'
-
