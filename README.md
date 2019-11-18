@@ -41,10 +41,11 @@ The `lifx-token` argument must be a valid LIFX personal access token. You can ge
 The selector allows you to select which devices will react to the pipeline. Using selectors you can change a single light, a single zone on a strip or beam, a group, a location or your entire account. You can read more about selectors on the [API documentation selectors page](https://api.developer.lifx.com/docs/selectors).
 
 Some example selectors are:
-`all` - All lights on the account.
-`label:Build` - All lights labelled 'build'.
-`location:Home` - All lights in the location named 'Home'.
-`id:d073d52988f3` - The light with the serial number `d073d52988f3`.
+
+* `all` - All lights on the account.
+* `label:Build` - All lights labelled 'build'.
+* `location:Home` - All lights in the location named 'Home'.
+* `id:d073d52988f3` - The light with the serial number `d073d52988f3`.
 
 ### status
 
