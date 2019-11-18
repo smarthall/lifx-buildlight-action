@@ -50,9 +50,9 @@ Some example selectors are:
 
 ### status
 
-Status can be set to one of `in_progress`, `success`, `failure` or `cancelled`. This will cause the lights to change status. Each status appears as follows:
+Status can be set to one of `in_progress`, `success`, `failure`, `cancelled`, `timed_out`, `neutral`, `timed_out` or `action_required`. This will cause the lights to change status. Each status appears as follows:
 
-#### in_progress
+#### in_progress, neutral
 
 The selected lights will 'breathe' slowly between the previous state and orange. This will continue either for 30 minutes, or until another change is made.
 
@@ -60,7 +60,7 @@ The selected lights will 'breathe' slowly between the previous state and orange.
 
 The selected lights will turn green.
 
-#### failure
+#### failure, timed_out, action_required
 
 The selected lights will turn red.
 

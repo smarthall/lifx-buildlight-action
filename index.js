@@ -7,6 +7,9 @@ const validStatus = [
     "failure",
     "success",
     "cancelled",
+    "neutral",
+    "action_required",
+    "timed_out",
 ]
 
 const options = {
@@ -29,6 +32,7 @@ try {
     }
 
     switch (status) {
+        case 'neutral':
         case 'in_progress':
             options.method = 'POST';
             options.path = '/v1/lights/' + selector + '/effects/breathe';
@@ -39,6 +43,8 @@ try {
             postData.power_on = true;
             break;
 
+        case 'action_required':
+        case 'timed_out':
         case 'failure':
             options.method = 'PUT';
             options.path = '/v1/lights/' + selector + '/state';
