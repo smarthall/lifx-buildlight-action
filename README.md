@@ -53,7 +53,7 @@ Status can be set to one of `in_progress`, `success`, `failure` or `cancelled`. 
 
 #### in_progress
 
-The selected lights will 'breathe' slowly between the previous state and orange. This will continue either for 6 minutes, or until another change is made.
+The selected lights will 'breathe' slowly between the previous state and orange. This will continue either for 30 minutes, or until another change is made.
 
 #### success
 
