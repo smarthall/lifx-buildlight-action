@@ -22,7 +22,6 @@ jobs:
         status: 'failure'
 
     - name: Test build light success mode
-      if: always()
       uses: smarthall/lifx-buildlight-action@master
       with:
         lifx-token: ${{ secrets.LIFX_TOKEN }}

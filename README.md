@@ -22,6 +22,7 @@ steps:
 - run: npm install
 - run: npm test
 - uses: smarthall/lifx-buildlight-action@master
+  if: always()
   with:
     lifx-token: ${{ secrets.LIFX_TOKEN }}
     selector: 'location:Work'
